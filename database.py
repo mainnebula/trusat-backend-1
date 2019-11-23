@@ -3227,7 +3227,7 @@ class Database:
                 'international_designator', intl_desg,
                 'name', name)
                 FROM celestrak_SATCAT
-                WHERE norad_num LIKE '%(PARTIAL)s%'
+                WHERE norad_num LIKE %(PARTIAL)s
                 OR intl_desg LIKE %(PARTIAL)s
                 ORDER by norad_num ASC
                 LIMIT 100;
